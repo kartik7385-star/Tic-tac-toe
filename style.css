@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.status {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #e94560;
+    font-weight: bold;
+}
+
+/* The 3x3 Grid */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    background-color: #16213e;
+    border: 2px solid #0f3460;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.cell:hover {
+    background-color: #0f3460;
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+/* Colors for X and O */
+.cell.X {
+    color: #4ecc71;
+}
+
+.cell.O {
+    color: #3498db;
+}
+
+/* Reset Button */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #e94560;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #ff6b81;
+}
